@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node index.ts"
+    "dev": "nodemon --exec 'ts-node-esm' index.ts ",
+    "build": "tsc ",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "eslint --ext .ts src --fix"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,12 @@
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "@types/express": "^4.17.21"
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.9.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.53.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
